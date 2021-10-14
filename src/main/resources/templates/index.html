@@ -8,5 +8,21 @@
 <a href="/index/?lang=en_US">English(US)</a>
 <a href="/index/?lang=zh_CN">简体中文</a></br>
 <h1 th:text="${msg}"></h1>
+
+<p>上传视频和照片</p>
+<form action="upload" method="post" enctype="multipart/form-data">
+    文件: <input type="file" name="file"/>
+    <input type="submit" value="上传"/>
+</form>
+<hr/>
+<p>下载视频和照片</p>
+<a href="download">下载文件</a>
+<hr/>
+<p>批量上传视频和照片</p>
+<form action="batch" method="post" enctype="multipart/form-data">
+    <p>文件1:<input type="file" name="file"/></p>
+    <p>文件2:<input type="file" name="file"/></p>
+    <p><input type="submit" value="上传"/></p>
+</form>
 </body>
 </html>
